@@ -1,5 +1,11 @@
 # FJ-Frontend-New
 
+## Description
+Refactor of the frontend for the Finance Journal. 
+
+### Related Projects
+The backend is written in Java and hosted in the repo: [FJ-Backend](https://github.com/Sixtey7/FJ-Backend)
+
 ## Build Setup
 
 ```bash
