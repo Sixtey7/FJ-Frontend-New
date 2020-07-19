@@ -59,8 +59,18 @@ export default {
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
+          icon: 'mdi-view-headline',
+          title: 'Accounts',
+          to: '/inspire'
+        },
+        {
+          icon: 'mdi-duck',
+          title: 'Transactions',
+          to: '/inspire'
+        },
+        {
+          icon: 'mdi-rowing',
+          title: 'Admin',
           to: '/inspire'
         }
       ],
