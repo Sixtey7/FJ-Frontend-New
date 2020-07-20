@@ -61,17 +61,17 @@ export default {
         {
           icon: 'mdi-view-headline',
           title: 'Accounts',
-          to: '/inspire'
+          to: '/accounts'
         },
         {
           icon: 'mdi-duck',
           title: 'Transactions',
-          to: '/inspire'
+          to: '/transactions'
         },
         {
           icon: 'mdi-rowing',
           title: 'Admin',
-          to: '/inspire'
+          to: '/admin'
         }
       ],
       miniVariant: false,
