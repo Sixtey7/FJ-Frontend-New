@@ -25,7 +25,7 @@
           <v-btn
             color="primary"
             nuxt
-            to="/inspire"
+            to="/accounts"
           >
             Continue
           </v-btn>
