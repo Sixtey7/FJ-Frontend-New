@@ -37,6 +37,10 @@ class AccountModel {
             });
     }
 
+    /**
+     * Saves the provided account (update or add) to both the collection and the backend
+     * @param {Account} accountToSave The account to be persisted
+     */
     async saveAccount(accountToSave) {
         // detemrine if this is an existing account or a new one
         if (accountToSave.id) {
@@ -70,6 +74,10 @@ class AccountModel {
         }
     }
 
+    /**
+     * Deletes the account with the provided ID from both the cache and the backend
+     * @param {String} idToDelete String containing the UUID to be deleted
+     */
     async deleteAccount(idToDelete) {
         this._logger.debug('Deleting an account with id: ' + idToDelete);
 
@@ -92,6 +100,10 @@ class AccountModel {
         }
     }
 
+    /**
+     * Helper method used to call the backends "PUT" endpoint
+     * @param {Account} accountToPut Account to be put to the backend
+     */
     async _putAccount(accountToPut) {
         // need to delete the epty id to prevent the backend from trying to handle it
         delete accountToPut.id;
@@ -105,7 +117,7 @@ class AccountModel {
                 'Content-type': 'application/json'
             },
             data:
-                accountJSON;
+                accountJSON
         })
         .then(response => {
             this._logger.debug('got the response from the put: ' + response.data);
@@ -118,6 +130,10 @@ class AccountModel {
         return returnVal;
     }
 
+    /**
+     * Helper method used to call the backends "POST" endpoint
+     * @param {Account} accountToPut Account to be posted to the backend
+     */
     async _postAccount(accountToPost) {
         let accountJSON = JSON.stringify(accountToPost);
 
@@ -148,6 +164,10 @@ class AccountModel {
         return returnVal;
     }
 
+    /**
+     * Helper method used to call the backends "DELETE" endpoint
+     * @param {String} accountToPut String containing the UUID to be passed to the DELETE endpoint
+     */
     async _deleteAccount(idToDelete) {
         this._logger.debug('Deleting account with id: ' + idToDelete);
 
@@ -172,7 +192,10 @@ class AccountModel {
         return returnVal;
     }
 
-    async deleteTotal() {
+    /**
+     * Determines the overall total based on all of the accounts
+     */
+    async determineTotal() {
         this._logger.debug('Determining the total for all accounts');
         let total = 0;
         this.accountsArray.forEach(account=> {
