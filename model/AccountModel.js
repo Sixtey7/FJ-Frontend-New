@@ -203,7 +203,7 @@ class AccountModel {
         });
 
         this.accountsTotal = total.toFixed(2);
-        this._logger.debug('Calculated the value: ' + this.accountsTotal)''
+        this._logger.debug('Calculated the value: ' + this.accountsTotal);
     }
 }
 
