@@ -22,3 +22,18 @@
         </v-list>
     </v-card>
 </template>
+<script>
+import AccountModel from '../../model/AccountModel';
+import ue from 'vue';
+export default {
+    name: 'AccountList',
+    data() {
+        return {
+            accountModel:  new AccountModel(Vue.$log, this.backendHost);
+        }
+    },
+    beforeCreate() {
+        this.backendHost = "http://localhost:8080/accounts";
+    }
+}
+</script>
