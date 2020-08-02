@@ -29,7 +29,7 @@ export default {
     name: 'AccountList',
     data() {
         return {
-            accountModel:  new AccountModel(Vue.$log, this.backendHost);
+            accountModel:  new AccountModel(Vue.$log, this.backendHost)
         }
     },
     beforeCreate() {
