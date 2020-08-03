@@ -24,7 +24,7 @@
 </template>
 <script>
 import AccountModel from '../../model/AccountModel';
-import ue from 'vue';
+import Vue from 'vue';
 export default {
     name: 'AccountList',
     data() {
