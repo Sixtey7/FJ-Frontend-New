@@ -17,3 +17,18 @@
     </v-flex>
   </v-layout>
 </template>
+<script>
+import AccountModel from '../../model/AccountModel';
+import Vue from 'vue';
+export default {
+    name: 'Accounts',
+    data() {
+        return {
+            accountModel:  new AccountModel(Vue.$log, this.backendHost)
+        }
+    },
+    beforeCreate() {
+        this.backendHost = "http://localhost:8080/accounts";
+    }
+}
+</script>
