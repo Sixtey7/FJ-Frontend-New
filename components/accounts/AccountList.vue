@@ -11,7 +11,7 @@
                 color="primary"
             >
                 <v-list-item
-                    v-for = "(account, i) in accounts"
+                    v-for = "(account, i) in accountsArray"
                     :key=i
                 >
                     <v-list-item-content>
