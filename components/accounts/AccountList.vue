@@ -24,16 +24,17 @@
 </template>
 <script>
 import AccountModel from '../../model/AccountModel';
-import Vue from 'vue';
+
 export default {
     name: 'AccountList',
     data() {
         return {
-            accountModel:  new AccountModel(Vue.$log, this.backendHost)
+            
         }
     },
-    beforeCreate() {
-        this.backendHost = "http://localhost:8080/accounts";
+    props: {
+        accountModel: AccountModel,
+        accountsArray: Array
     }
 }
 </script>
