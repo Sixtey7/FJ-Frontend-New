@@ -1,19 +1,9 @@
 <template>
   <v-layout>
     <v-flex class="text-center">
-      <img
-        src="/v.png"
-        alt="Vuetify.js"
-        class="mb-5"
-      >
-      <blockquote class="blockquote">
-        Accounts will go here!
-        <footer>
-          <small>
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
-      </blockquote>
+      <AccountList 
+        :accountModel = "accountModel"
+        :accountsArray = "accountModel.accountsArray"/>
     </v-flex>
   </v-layout>
 </template>
