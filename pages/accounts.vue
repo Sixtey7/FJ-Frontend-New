@@ -9,7 +9,7 @@
 </template>
 <script>
 import AccountModel from '../model/AccountModel';
-import AccountList from '../components/AccountList';
+import AccountList from '../components/accounts/AccountList';
 import Vue from 'vue';
 export default {
     name: 'Accounts',
