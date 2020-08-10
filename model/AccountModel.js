@@ -1,5 +1,6 @@
 import axios from 'axios';
 import AccountHelper from '../utils/AccountHelper';
+const consola = require('consola');
 
 const URL_SUFFIX = '/accounts/';
 /**
@@ -18,8 +19,8 @@ class AccountModel {
      * @param {Object} logger Logger object to be used for the class
      * @param {String} backendHost Hostname to find the bakcend at
      */
-    constructor(logger, backendHost) {
-        this._logger = logger;
+    constructor(backendHost) {
+        this._logger = consola;
         this._logger.debug('running account model constructor!');
         this.backendURL = 'http://' + backendHost + URL_SUFFIX;
         this._accountHelper = new AccountHelper(logger);

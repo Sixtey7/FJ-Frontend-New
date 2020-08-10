@@ -10,7 +10,7 @@
 <script>
 import AccountModel from '../model/AccountModel';
 import AccountList from '../components/accounts/AccountList';
-import Vue from 'vue';
+
 export default {
     name: 'Accounts',
     components: {
@@ -18,7 +18,7 @@ export default {
     },
     data() {
         return {
-            accountModel:  new AccountModel(Vue.$log, this.backendHost)
+            accountModel:  new AccountModel(this.backendHost)
         }
     },
     beforeCreate() {
