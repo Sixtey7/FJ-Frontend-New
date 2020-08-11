@@ -4,7 +4,7 @@
 class AccountHelper {
     _logger;
 
-    constructor(ogger) {
+    constructor(logger) {
         this._logger = logger;
     }
 

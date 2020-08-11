@@ -23,7 +23,7 @@ class AccountModel {
         this._logger = consola;
         this._logger.debug('running account model constructor!');
         this.backendURL = 'http://' + backendHost + URL_SUFFIX;
-        this._accountHelper = new AccountHelper(logger);
+        this._accountHelper = new AccountHelper(consola);
         this.accountsArray = new Array();
 
         // Query the backend to get the current account objects
