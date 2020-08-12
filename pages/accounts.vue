@@ -22,7 +22,7 @@ export default {
         }
     },
     beforeCreate() {
-        this.backendHost = "http://raspberrypi:8081ß/accounts";
+        this.backendHost = "http://raspberrypi:8081/accounts";
     }
 }
 </script>
