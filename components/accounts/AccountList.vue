@@ -7,7 +7,6 @@
         <v-list dense>
             <v-subheader>Accounts</v-subheader>
             <v-list-item-group
-                v-model="account"
                 color="primary"
             >
                 <v-list-item
