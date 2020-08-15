@@ -16,6 +16,9 @@
                     <v-list-item-content>
                         <v-list-item-title v-text="account.name"></v-list-item-title>
                     </v-list-item-content>
+                    <v-list-item-content>
+                        <v-list-item-title v-text="account.type"></v-list-item-title>
+                    </v-list-item-content>
                 </v-list-item>
             </v-list-item-group>
         </v-list>
