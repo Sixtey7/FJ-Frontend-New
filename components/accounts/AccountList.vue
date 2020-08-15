@@ -4,24 +4,13 @@
         max-width="300px"
         title
     >
-        <v-list dense>
-            <v-subheader>Accounts</v-subheader>
-            <v-list-item-group
-                color="primary"
-            >
-                <v-list-item
-                    v-for = "account in accountsArray"
-                    :key=account.id
-                >
-                    <v-list-item-content>
-                        <v-list-item-title v-text="account.name"></v-list-item-title>
-                    </v-list-item-content>
-                    <v-list-item-content>
-                        <v-list-item-title v-text="account.type"></v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
-            </v-list-item-group>
-        </v-list>
+       <v-data-table
+            :headers="headers"
+            :items="accountsArray"
+            :items-per-page="10"
+            class="elevation-1"
+        >
+       </v-data-table>
     </v-card>
 </template>
 <script>
@@ -31,7 +20,23 @@ export default {
     name: 'AccountList',
     data() {
         return {
-            
+            headers: [
+                {
+                    text: 'Name',
+                    align: 'start',
+                    sortable: true,
+                    value: 'name'
+                },
+                {
+                    text: 'Dynamic',
+                    value: 'dynamic'
+                },
+                {
+                    text: 'Notes',
+                    value: 'notes'
+                }
+
+            ]
         }
     },
     props: {
