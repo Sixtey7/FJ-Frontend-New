@@ -14,11 +14,11 @@
      */
     massageTransactions(txList) {
         if (typeof(txList) !== 'undefined') {
-            txList.foreach(transaction => {
+            txList.forEach(transaction => {
                 transaction.date = new Date(transaction.date)
             });
 
-            transactionList.sort(this._compareTx);
+            txList.sort(this._compareTx);
         }
 
         this._calculateBalance(txList);
@@ -48,7 +48,7 @@
      */
     _calculateBalance(txList) {
         let currentBalance = 0;
-        txList.foreach(transaction => {
+        txList.forEach(transaction => {
             currentBalance = transaction.amount;
             transaction.balance = currentBalance;
         });
