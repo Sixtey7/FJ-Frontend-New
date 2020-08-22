@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      transactionModel = new TransactionModel(this.backendHost)
+      transactionModel: new TransactionModel(this.backendHost)
     }
   },
   beforeCreate() {
