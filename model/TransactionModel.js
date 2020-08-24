@@ -38,10 +38,10 @@ class TransactionModel {
 
     /**
      * Saves the provided Transaction (update or add) to both the collection and the backend
-     * @param {Transaction} txToSave The account to be persisted
+     * @param {Transaction} txToSave The transaction to be persisted
      */
     async saveTx(txToSave) {
-        // detemrine if this is an existing account or a new one
+        // detemrine if this is an existing transaction or a new one
         if (txToSave.id) {
             this._logger.debug('saving an edited transaction: ' + JSON.stringify(txToSave))
 
@@ -95,7 +95,7 @@ class TransactionModel {
 
     /**
      * Helper method used to call the backends "PUT" endpoint
-     * @param {Transaction} accountToPut Transaction to be put to the backend
+     * @param {Transaction} txToPut Transaction to be put to the backend
      */
     async _putTx(txToPut) {
         // need to delete the epty id to prevent the backend from trying to handle it
@@ -159,7 +159,7 @@ class TransactionModel {
 
     /**
      * Helper method used to call the backends "DELETE" endpoint
-     * @param {String} accountToPut String containing the UUID to be passed to the DELETE endpoint
+     * @param {String} idToDelete String containing the UUID to be passed to the DELETE endpoint
      */
     async _deleteTx(idToDelete) {
         this._logger.debug('Deleting transaction with id: ' + idToDelete);
