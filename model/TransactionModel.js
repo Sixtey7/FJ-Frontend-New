@@ -98,7 +98,7 @@ class TransactionModel {
      * @param {Transaction} txToPut Transaction to be put to the backend
      */
     async _putTx(txToPut) {
-        // need to delete the epty id to prevent the backend from trying to handle it
+        // need to delete the empty id to prevent the backend from trying to handle it
         delete txToPut.id;
         let txJSON = JSON.stringify(txToPut);
 

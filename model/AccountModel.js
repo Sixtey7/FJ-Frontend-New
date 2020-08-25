@@ -106,7 +106,7 @@ class AccountModel {
      * @param {Account} accountToPut Account to be put to the backend
      */
     async _putAccount(accountToPut) {
-        // need to delete the epty id to prevent the backend from trying to handle it
+        // need to delete the empty id to prevent the backend from trying to handle it
         delete accountToPut.id;
         let accountJSON = JSON.stringify(accountToPut);
 
@@ -133,7 +133,7 @@ class AccountModel {
 
     /**
      * Helper method used to call the backends "POST" endpoint
-     * @param {Account} accountToPut Account to be posted to the backend
+     * @param {Account} accountToPost Account to be posted to the backend
      */
     async _postAccount(accountToPost) {
         let accountJSON = JSON.stringify(accountToPost);
@@ -167,7 +167,7 @@ class AccountModel {
 
     /**
      * Helper method used to call the backends "DELETE" endpoint
-     * @param {String} accountToPut String containing the UUID to be passed to the DELETE endpoint
+     * @param {String} idToDelete String containing the UUID to be passed to the DELETE endpoint
      */
     async _deleteAccount(idToDelete) {
         this._logger.debug('Deleting account with id: ' + idToDelete);
