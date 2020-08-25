@@ -27,8 +27,16 @@ export default {
                     value: 'name'
                 },
                 {
+                    text: 'Date',
+                    value: 'date',
+                },
+                {
                     text: 'Amount',
                     value: 'amount'
+                },
+                {
+                    text: 'Type',
+                    value: 'type'
                 },
                 {
                     text: 'Notes',
