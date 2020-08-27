@@ -16,16 +16,6 @@
         <v-card-text>
           <p>Webpage Goes Here</p>
         </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/accounts"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
       </v-card>
     </v-flex>
   </v-layout>
