@@ -45,7 +45,7 @@ class TransactionModel {
         if (txToSave.id) {
             this._logger.debug('saving an edited transaction: ' + JSON.stringify(txToSave))
 
-            let returnVal = await this._postT(txToSave);
+            let returnVal = await this._postTx(txToSave);
 
             if (returnVal) {
                 this.txArray = await this._txHelper.mergeTxIntoArray(txToSave, this.txArray);
