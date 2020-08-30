@@ -49,7 +49,7 @@
     _calculateBalance(txList) {
         let currentBalance = 0;
         txList.forEach(transaction => {
-            currentBalance = transaction.amount;
+            currentBalance += transaction.amount;
             transaction.balance = currentBalance;
         });
     }
