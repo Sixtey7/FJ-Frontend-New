@@ -35,6 +35,10 @@ export default {
                     value: 'amount'
                 },
                 {
+                    text: 'Balance',
+                    value: 'balance'
+                },
+                {
                     text: 'Type',
                     value: 'type'
                 },
