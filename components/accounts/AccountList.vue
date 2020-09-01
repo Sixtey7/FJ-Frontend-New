@@ -1,7 +1,7 @@
 <template>
     <v-card
         class = "mx-auto"
-        max-width="300px"
+        max-width="800px"
         title
     >
        <v-data-table
