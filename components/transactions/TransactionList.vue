@@ -29,6 +29,7 @@ export default {
                 {
                     text: 'Date',
                     value: 'date',
+                    sortable: true
                 },
                 {
                     text: 'Amount',
